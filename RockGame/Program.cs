@@ -10,6 +10,24 @@ namespace RockGame
     {
         static void Main(string[] args)
         {
+            var consoleIn = new ConsoleWrapper();
+            RockPaperScissors theGame = new RockPaperScissors();
+            string winner = theGame.BestOfThree(consoleIn);
+            Console.WriteLine("GAME OVER: " + winner);
+
+        }
+    }
+
+    public interface IConsole
+    {
+        string ReadLine();
+    }
+
+    public class ConsoleWrapper : IConsole
+    {
+        public string ReadLine()
+        {
+            return Console.ReadLine();
         }
     }
 }
