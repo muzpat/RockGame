@@ -15,6 +15,8 @@ namespace RockGame
             string winner = theGame.BestOfThree(consoleIn);
             Console.WriteLine("GAME OVER: " + winner);
 
+            Console.WriteLine("Press ENTER to exit");
+            Console.ReadLine();
         }
     }
 
